@@ -38,5 +38,18 @@ const team = [
     },
 ]
 
-console.log (team)
+team.forEach( member => {
+    console.log(`Nome: ${member.nome}, Ruolo: ${member.ruolo}, Foto: ${member.foto}`);
+})
 
+const listTeam = document.getElementById ('team-member');
+
+team.forEach(member => {
+    const memberInfo = document.createElement('div');
+    memberInfo.innerHTML = `
+      <p>Nome: ${member.nome}</p>
+      <p>Ruolo: ${member.ruolo}</p>
+      <img src="${member.foto}" alt="${member.nome}">
+    `;
+    listTeam.appendChild(memberInfo);
+  });
