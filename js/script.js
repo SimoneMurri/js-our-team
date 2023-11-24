@@ -38,5 +38,5 @@ const team = [
     },
 ]
 
-
+console.log (team)
 
